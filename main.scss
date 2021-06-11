@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap");
 
 //******************************************************************************
 
@@ -33,10 +34,16 @@ body {
 
 section {
   padding: 25px 5%;
+  scroll-behavior: smooth;
 }
 
+a {
+  color: white;
+  text-decoration: none;
+}
 .button-hover {
   display: inline-block;
+  cursor: pointer;
 
   .button {
     align-items: center;
@@ -55,6 +62,9 @@ section {
   }
 }
 
+input {
+  cursor: pointer;
+}
 .btn-talk {
   min-width: 220px;
 }
@@ -130,6 +140,14 @@ button :focus {
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
+  z-index: -1;
+}
+
+.hero-img-fg {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(78, 69, 110, 0.589);
+  z-index: 0;
 }
 
 @media (max-height: 600px) {
@@ -144,6 +162,7 @@ button :focus {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  cursor: pointer;
 }
 
 .lg-nav {
@@ -157,6 +176,7 @@ button :focus {
   font-size: $heading-font;
   line-height: 47px;
   color: $heading-color;
+  font-weight: 700;
   margin-bottom: 5%;
 }
 
@@ -180,21 +200,21 @@ button :focus {
     .lg-nav_item {
       margin-left: 25px;
       color: #fff;
-      border-bottom: 1px solid rgba(255, 105, 180, 0);
+      border-bottom: 2px solid rgba(255, 105, 180, 0);
     }
   }
 
   .lg-nav :hover {
-    border-bottom: 2px solid hotpink;
+    border-bottom: 3px solid hotpink;
   }
 
+  .lg-nav > * :hover {
+    border: none;
+  }
   .lg-nav_item > h4 {
     padding: 7px 0;
   }
-  .lg-nav_item > h4 :hover {
-    padding: 3px 0;
-    border: 1px solid rgba(255, 0, 0, 0);
-  }
+
   .navigation {
     padding-top: 0;
   }
@@ -276,8 +296,8 @@ button :focus {
   .services-round__bg {
     position: absolute;
     top: 20px;
-    width: 50px;
-    height: 50px;
+    width: 0px;
+    height: 80px;
     border-radius: 50%;
     display: none;
   }
@@ -356,6 +376,7 @@ button :focus {
 
 .services-grid {
   display: none;
+  cursor: pointer;
 }
 
 @media (min-width: 992px) {
@@ -371,9 +392,20 @@ button :focus {
     gap: 25px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto auto;
+
+    :hover {
+      outline: 3px solid rgb(255, 108, 181);
+      box-shadow: 0 0 10px rgb(248, 10, 10);
+    }
+
+    > * :hover {
+      outline: 1px solid rgba(255, 0, 0, 0);
+      box-shadow: none;
+    }
   }
 
   .services-grid__item {
+    outline: 3px solid rgba(255, 108, 182, 0);
     margin-top: 10px;
     border: 1px solid silver;
     border-radius: 5px;
@@ -392,6 +424,7 @@ button :focus {
     h5 {
       color: #445a64;
       font-size: 14px;
+      font-weight: 400;
       line-height: 22px;
     }
 
@@ -410,8 +443,8 @@ button :focus {
 
     .xxx {
       display: inline-block;
-      height: 45px;
-      width: 45px;
+      height: 60px;
+      width: 60px;
       border-radius: 50%;
       position: absolute;
     }
@@ -543,8 +576,28 @@ button :focus {
   flex-direction: column;
   padding: 0 5%;
   min-width: 100%;
+  > * {
+    cursor: pointer;
+  }
 }
 
+.ppp {
+  left: 0;
+  top: 0;
+  position: absolute;
+  color: rgba(255, 255, 255, 0);
+  background-color: rgba(82, 82, 82, 0);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+@media (max-width: 991px) {
+  .ppp {
+    display: none;
+  }
+}
 .profolio-img {
   background-image: url("assets/daily.jpg");
   background-position: center;
@@ -554,6 +607,17 @@ button :focus {
   margin-top: 7px;
   width: 100%;
   height: 60vw;
+
+  position: relative;
+
+  :hover {
+    color: white;
+    background-color: rgba(32, 32, 32, 0.568);
+  }
+
+  > * :hover {
+    background-color: rgba(255, 255, 255, 0);
+  }
   // height: 180px;
   // width: 250px;
 }
@@ -590,6 +654,19 @@ button :focus {
   display: flex;
   justify-content: space-between;
   margin-top: 15px;
+  > * {
+    cursor: pointer;
+  }
+
+  :hover {
+    outline: 2px solid rgb(255, 87, 171);
+    box-shadow: 0 0 3px;
+  }
+
+  > * :hover {
+    outline: none;
+    box-shadow: none;
+  }
 }
 
 .stack-logo > * {
@@ -646,24 +723,28 @@ button :focus {
 }
 
 .section-pink__item {
-  border: 2px dotted white;
+  border: 1px dotted white;
   border-radius: 10px;
-  height: 150px;
+  height: 200px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   .section-pink__img {
     margin-top: 30px;
   }
 
   .section-pink__head {
-    font-size: 18px;
+    font-size: 26px;
     color: #ffffff;
     margin-top: 10px;
+    font-weight: 500;
   }
 
   .section-pink__sub {
-    font-size: 12px;
-    font-weight: 100;
+    font-size: 14px;
+    font-weight: 500;
     color: #ffffff;
     margin-top: 7px;
   }
@@ -711,21 +792,25 @@ button :focus {
           }
           border-radius: 50%;
           background-color: #cbcbcc;
-          max-width: 25%;
+          max-width: 15%;
           overflow: hidden;
           margin: 0 25px 0 0;
         }
 
         .people-role {
           max-width: 280px;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          min-height: 80px;
           h3 {
             font-size: 22px;
             line-height: 40px;
             color: rgb(66, 66, 66);
           }
           h4 {
-            font-size: 16px;
-            line-height: 18px;
+            font-size: 14px;
+            line-height: 20px;
             font-weight: 400;
             color: rgb(133, 133, 133);
           }
@@ -823,6 +908,7 @@ button :focus {
   }
   .core-team {
     margin: 0 1%;
+    cursor: pointer;
   }
 
   #core1:checked ~ .core-team-1 {
@@ -890,6 +976,9 @@ button :focus {
   overflow: hidden;
   text-align: center;
   min-width: 100%;
+  > * {
+    cursor: pointer;
+  }
 }
 
 .blog-img {
