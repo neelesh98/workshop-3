@@ -784,12 +784,12 @@
   menu1[0].addEventListener("click", function () {
     menu1[0].style.display = 'none';
     menu2[0].style.display = 'inline-block'
-    menu[0].style.display = 'inline-block'
+    menu[0].style.left = '0'
   })
 
   menu2[0].addEventListener("click", function () {
     menu2[0].style.display = 'none';
-    menu[0].style.display = 'none';
+    menu[0].style.left = '-100%';
     menu1[0].style.display = 'inline-block'
   })
 </script>

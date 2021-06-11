@@ -77,7 +77,7 @@ button :focus {
 .hidden-menu {
   position: absolute;
   top: 0;
-  left: 0;
+  left: -100%;
   z-index: 10;
   width: 85%;
   height: 100vh;
