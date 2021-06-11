@@ -139,7 +139,7 @@ button :focus {
 .hero-img-fg {
   height: 100%;
   width: 100%;
-  background-color: rgba(78, 69, 110, 0.589);
+  background-color: #4778a071;
   z-index: 0;
 }
 
@@ -397,7 +397,7 @@ button :focus {
         grid-template-rows: auto auto;
   }
   .services-grid :hover {
-    outline: 3px solid #ff6cb5;
+    outline: 2px solid #e994bf;
     -webkit-box-shadow: 0 0 10px #f80a0a;
             box-shadow: 0 0 10px #f80a0a;
   }
@@ -644,6 +644,9 @@ button :focus {
 }
 
 @media (min-width: 992px) {
+  #profo-hide {
+    display: none;
+  }
   .profolio {
     height: 300px;
     min-width: 33%;
@@ -652,14 +655,13 @@ button :focus {
     margin-left: 0;
   }
   #profo2:checked ~ .pro1 {
-    margin-left: 0;
+    margin-left: -100%;
   }
   #profo3:checked ~ .pro1 {
     margin-left: 0;
   }
   .pro1 {
-    -webkit-transition: 0;
-    transition: 0;
+    transition: -150%;
   }
 }
 
@@ -890,15 +892,16 @@ button :focus {
   }
 }
 
-@media (max-width: 991px) {
-  .core-slider {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    width: 100%;
-    overflow: hidden;
-  }
-  .core-slider .core-team {
+.core-slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+}
+
+@media (max-width: 992px) {
+  .core-team {
     min-width: 50%;
     padding: 5%;
   }
@@ -918,15 +921,15 @@ button :focus {
 }
 
 #core2:checked ~ .core-team-1 {
-  margin-left: -50%;
+  margin-left: -100%;
 }
 
 #core3:checked ~ .core-team-1 {
-  margin-left: -100%;
+  margin-left: -200%;
 }
 
 #core4:checked ~ .core-team-1 {
-  margin-left: -100%;
+  margin-left: -250%;
 }
 
 .label-group_core {
@@ -983,23 +986,32 @@ button :focus {
   }
   .core-team {
     margin: 0 1%;
+    min-width: 23%;
+    border: 1px solid #c5c5c5;
+    border-radius: 5px;
     cursor: pointer;
   }
   #core1:checked ~ .core-team-1 {
     margin-left: 0;
   }
   #core2:checked ~ .core-team-1 {
-    margin-left: 0;
+    margin-left: -75%;
   }
   #core3:checked ~ .core-team-1 {
-    margin-left: 0;
+    margin-left: -50%;
   }
   #core4:checked ~ .core-team-1 {
-    margin-left: 0;
+    margin-left: -75%;
   }
   .core-team-1 {
     -webkit-transition: 0;
     transition: 0;
+  }
+  #core3-hide {
+    display: none;
+  }
+  #core4-hide {
+    display: none;
   }
 }
 
@@ -1107,6 +1119,9 @@ button :focus {
   }
   #blog3:checked ~ .blog-item1 {
     margin-left: 0;
+  }
+  .blog-label__item {
+    display: none;
   }
 }
 
