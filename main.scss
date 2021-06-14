@@ -19,6 +19,9 @@ $sub-font-size: 18px;
 //******************************************************************************
 
 //GENERAL
+html {
+  scroll-behavior: smooth;
+}
 
 * {
   margin: 0;
@@ -34,7 +37,6 @@ body {
 
 section {
   padding: 25px 5%;
-  scroll-behavior: smooth;
 }
 
 a {
@@ -116,6 +118,10 @@ button :focus {
   .hidden-menu_item {
     min-height: 35px;
     padding: 10px 20px;
+  }
+
+  a {
+    color: black;
   }
 }
 .menu1 {

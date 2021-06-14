@@ -24,22 +24,41 @@
           </a>
         </div>
         <div class="hidden-menu_item">
-          <h4>Features</h4>
+          <a href="#sec3">
+            <h4>Features</h4>
+          </a>
+
         </div>
         <div class="hidden-menu_item">
-          <h4>Works</h4>
+          <a href="#sec4">
+            <h4>Works</h4>
+          </a>
+
+
         </div>
         <div class="hidden-menu_item">
-          <h4>Tech Stack</h4>
+          <a href="#sec5">
+            <h4>Tech Stack</h4>
+          </a>
+
         </div>
         <div class="hidden-menu_item">
-          <h4>Team</h4>
+          <a href="#sec6">
+            <h4>Team</h4>
+          </a>
+
         </div>
         <div class="hidden-menu_item">
-          <h4>Blog</h4>
+          <a href="#sec7">
+            <h4>Blog</h4>
+          </a>
+
         </div>
         <div class="hidden-menu_item">
-          <h4>Contact</h4>
+          <a href="#sec8">
+            <h4>Contact</h4>
+          </a>
+
         </div>
       </div>
       <div class="navigation">
@@ -898,8 +917,17 @@
   menu2[0].addEventListener("click", function () {
     menu2[0].style.display = 'none';
     menu[0].style.left = '-100%';
-    menu1[0].style.display = 'inline-block'
+    menu1[0].style.display = 'inline-block';
   })
+
+  var menu_item = document.getElementsByClassName('hidden-menu_item');
+  for (z = 0; z < menu_item.length; z++) {
+    menu_item[z].addEventListener('click', function () {
+      menu2[0].style.display = 'none';
+      menu[0].style.left = '-100%';
+      menu1[0].style.display = 'inline-block';
+    })
+  }
 
   var corec = document.getElementsByClassName('label-core');
 
@@ -941,6 +969,7 @@
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
   }
+
 
 </script>
 
